@@ -24,19 +24,16 @@ Set中元素不能重复, 更关注某个成员存在与否而不是它的顺序
 
 List -> Array
 
-  * 
   ```
   list.toArray()
   ```
 
-  * 
   ```
   list.toArray(T[] t)
   ```
 
 Array -> List
 
-  * 
   ```
   Arrays.toList(ary)
   ```
@@ -49,28 +46,19 @@ Array -> List
 
 遍历Map:
 
-  * 
   ```
   for(Map.Entry<String, String> entry: map.entrySet()) { ... }
   ```
 
-  * 
   ```
   for(String key: map.keySet()) {  ... }
   ```
 
 如果很需要有序便利时, 可以把keys存储到TreeSet中，然后再遍历.
 
-  * 
   ```
   Set keys = new TreeSet(map.keySet());
   for(Object key: keys) { ... }
   ```
 
 ### Using Wrapper Classes
-
-```javascript
-$(function(){
-  $('div').html('I am a div.');
-});
-```
