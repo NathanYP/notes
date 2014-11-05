@@ -32,3 +32,10 @@ List -> Array
 Array -> List
 
 `Arrays.toList(ary)`
+
+如果需要做很多insert/delete操作, 应该使用LinkedList.
+
+# Using Maps
+
+需要建立映射关系时, 应该使用Map (Hashtable不推荐)
+
