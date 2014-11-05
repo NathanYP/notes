@@ -1,11 +1,10 @@
-Java Collection Tips
+# Java Collection Tips
 
-# Arrays vs. Collections
+### Arrays vs. Collections
 
 Array最快但灵活性不够. 尽量不要用, 除非能够接受成员顺序和成员本身不可变.
 
-
-# Using Sets
+### Using Sets
 
 Set中元素不能重复, 更关注某个成员存在与否而不是它的顺序.
 
@@ -15,7 +14,7 @@ Set中元素不能重复, 更关注某个成员存在与否而不是它的顺序
 
 `Iterator it = (new TreeSet(unsortedSet)).iterator();`
 
-# Using List
+### Using List
 
 当成员的添加顺序很重要时, 应该使用List.
 
@@ -25,17 +24,53 @@ Set中元素不能重复, 更关注某个成员存在与否而不是它的顺序
 
 List -> Array
 
-`list.toArray()`
+  * 
+  ```
+  list.toArray()
+  ```
 
-`list.toArray(T[] t)`
+  * 
+  ```
+  list.toArray(T[] t)
+  ```
 
 Array -> List
 
-`Arrays.toList(ary)`
+  * 
+  ```
+  Arrays.toList(ary)
+  ```
 
 如果需要做很多insert/delete操作, 应该使用LinkedList.
 
-# Using Maps
+### Using Maps
 
-需要建立映射关系时, 应该使用Map (Hashtable不推荐)
+需要建立映射关系时, 应该使用Map.
 
+遍历Map:
+
+  * 
+  ```
+  for(Map.Entry<String, String> entry: map.entrySet()) { ... }
+  ```
+
+  * 
+  ```
+  for(String key: map.keySet()) {  ... }
+  ```
+
+如果很需要有序便利时, 可以把keys存储到TreeSet中，然后再遍历.
+
+  * 
+  ```
+  Set keys = new TreeSet(map.keySet());
+  for(Object key: keys) { ... }
+  ```
+
+### Using Wrapper Classes
+
+```javascript
+$(function(){
+  $('div').html('I am a div.');
+});
+```
