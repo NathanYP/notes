@@ -1,5 +1,8 @@
 # Java Collection Tips
 
+___本文的参考资料有些过时, 更应该针对Java 7做修改___
+
+
 ### Arrays vs. Collections
 
 Array最快但灵活性不够. 尽量不要用, 除非能够接受成员顺序和成员本身不可变.
@@ -61,4 +64,11 @@ Array -> List
   for(Object key: keys) { ... }
   ```
 
-### Using Wrapper Classes
+### Bulk Methods for Addition/Removal
+
+主要是两个方法: addAll(Collection c), removeAll(Collection c)
+
+
+### Using the Static Utility Methods of the Collections Class
+
+***Collections***中的各种静态方法要多了解, 尤其涉及到synchronized或者immutable.
